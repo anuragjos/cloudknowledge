@@ -6,10 +6,10 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install -y httpd \
  zip \
  unzip 
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page286/plot-listing.zip /var/www/html/
+ADD ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/ /var/www/html/
 WORKDIR /var/www/html
-RUN unzip plot-listing.zip
-RUN cp -rvf plot-listing/* .
-RUN rm -rf plot-listing pilot-listing.zip
+RUN unzip photogenic.zip
+RUN cp -rvf photogenic/* .
+RUN rm -rf photogenic photogenic.zip
 CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
 EXPOSE 88
